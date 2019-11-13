@@ -14,13 +14,18 @@
         <th>Telefono</th>
       </tr>
 
-      <tr>
-        <td>Aqui el id</td>
-        <td>Aqui el nombre</td>
-        <td>Aqui el email</td>
-        <td>Aqui el telefono</td>
-      </tr>
+      @if (count($empleados)>0)
+        @foreach($empleados as $empleado)
+          <tr>
+            <td>{{$empleado->id}}</td>
+            <td>{{$empleado->nombre}}</td>
+            <td>{{$empleado->email}}</td>
+            <td>{{$empleado->telefono}}</td>
 
+
+          </tr>
+        @endforeach
+    @endif
     </table>
 
 @endsection

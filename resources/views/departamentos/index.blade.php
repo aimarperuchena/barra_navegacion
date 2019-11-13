@@ -11,11 +11,14 @@
       <th>Id</th>
       <th>Nombre</th>
     </tr>
-
-    <tr>
-      <td>Aqui el id</td>
-      <td>Aqui el nombre</td>
-    </tr>
+    @if (count($departamentos)>0)
+        @foreach($departamentos as $departamento)
+          <tr>
+            <td>{{$departamento->id}}</td>
+            <td>{{$departamento->nombre}}</td>
+          </tr>
+        @endforeach
+    @endif
 
   </table>
 

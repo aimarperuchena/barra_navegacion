@@ -16,14 +16,18 @@
         <th>Horas estimadas</th>
       </tr>
 
-      <tr>
-        <td>Aqui el id</td>
-        <td>Aqui el nombre</td>
-        <td>Aqui el titulo</td>
-        <td>Aqui la fecha de inicio</td>
-        <td>Aqui la fecha de fin</td>
-        <td>Aqui las horas estimadas</td>
-      </tr>
+      @if (count($proyectos)>0)
+        @foreach($proyectos as $proyecto)
+          <tr>
+            <td>{{$proyecto->id}}</td>
+            <td>{{$proyecto->nombre}}</td>
+            <td>{{$proyecto->titulo}}</td>
+            <td>{{$proyecto->fechainicio}}</td>
+            <td>{{$proyecto->fechafin}}</td>
+            <td>{{$proyecto->horasestimadas}}</td>
+          </tr>
+        @endforeach
+    @endif
     </table>
 
 @endsection

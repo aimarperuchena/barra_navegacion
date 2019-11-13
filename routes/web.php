@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('home');
 });
+
+
+
+
+
+Route::get('departamentos', 'DepartamentoController@index')->name('departamentos');
+Route::get('empleados', 'EmpleadoController@index')->name('empleados');
+Route::get('proyectos', 'ProyectoController@index')->name('proyectos');
+
+
+    
+
+
