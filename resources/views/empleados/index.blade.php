@@ -10,6 +10,7 @@
       <tr>
         <th>Id</th>
         <th>Nombre</th>
+        <th>Apellido</th>
         <th>Email</th>
         <th>Telefono</th>
       </tr>
@@ -19,6 +20,7 @@
           <tr>
             <td>{{$empleado->id}}</td>
             <td>{{$empleado->nombre}}</td>
+            <td>{{$empleado->apellido}}</td>
             <td>{{$empleado->email}}</td>
             <td>{{$empleado->telefono}}</td>
 
