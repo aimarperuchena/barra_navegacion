@@ -11,19 +11,21 @@ class Proyecto_table_seeder extends Seeder
      */
     public function run()
     {
-        DB::table('proyectos')->insert([
-            'nombre' => 'nombre_pryecto_1',
-            'titulo' => 'titulo_proyecto1',
-            'fechainicio'  =>  '2010/10/15',
-            'fechafin'    =>  '2010/10/16',
-            'horasestimadas' => '10'
-        ]);
-        DB::table('proyectos')->insert([
-            'nombre' => 'nombre_pryecto_2',
-            'titulo' => 'titulo_proyecto2',
-            'fechainicio'  =>  '2010/10/13',
-            'fechafin'    =>  '2010/10/14',
-            'horasestimadas' => '20'
-        ]);
+        $fecha = date('Y/m/d');
+  
+        for ($i=0;$i<20;$i++) {
+            $fechainicio = strtotime ( "+".rand(1,31)." day" , strtotime ( $fecha ) ) ;
+            $fechainicio = date ( 'Y/m/d' , $fechainicio);
+      
+            $fechafin = strtotime ( "+".rand(30,500)." day" , strtotime ( $fecha ) ) ;
+            $fechafin = date ( 'Y/m/d' , $fechafin );
+              DB::table('proyectos')->insert([
+                'nombre' => Str::random(10),
+                'titulo' => Str::random(20),
+                'fechainicio' => $fechainicio,
+                'fechafin'  => $fechafin,
+                'horasestimadas' => rand(500,3000)
+            ]);
+        }
     }
 }
