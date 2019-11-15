@@ -11,4 +11,10 @@ class DepartamentoController extends Controller
     
     return view('departamentos/index')->with('departamentos',$departamentos);
   }
+
+  public function show(){
+    $departamentos = Departamento::all();
+    
+    return view('departamentos/show')->with('departamentos',$departamentos);
+  }
 }

@@ -13,5 +13,7 @@ class Empleado extends Model
     {
     return $this->hasOne('App\Proyecto');
     }
+
+    
     
 }

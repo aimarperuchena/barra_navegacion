@@ -14,7 +14,7 @@
     @if (count($departamentos)>0)
         @foreach($departamentos as $departamento)
           <tr>
-            <td>{{$departamento->id}}</td>
+            <td>{{$departamento->id}}</a></td>
             <td>{{$departamento->nombre}}</td>
           </tr>
         @endforeach
