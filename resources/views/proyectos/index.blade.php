@@ -14,6 +14,7 @@
         <th>Fecha Inicio</th>
         <th>Fecha fin</th>
         <th>Horas estimadas</th>
+        <th>Empleado</th>
       </tr>
 
       @if (count($proyectos)>0)
@@ -25,6 +26,7 @@
             <td>{{$proyecto->fechainicio}}</td>
             <td>{{$proyecto->fechafin}}</td>
             <td>{{$proyecto->horasestimadas}}</td>
+            <td>{{$proyecto->empleado->nombre}}</td>
           </tr>
         @endforeach
     @endif

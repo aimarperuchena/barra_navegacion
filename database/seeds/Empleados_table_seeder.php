@@ -25,5 +25,61 @@ class Empleados_table_seeder extends Seeder
             'telefono'    =>  '12345378'
             
         ]);
+        DB::table('empleados')->insert([
+            'nombre' => 'paco2',
+            'apellido' => 'paquito2',
+            'email'  =>  'paco@gmail.com',
+            'telefono'    =>  '12345378'
+            
+        ]);
+        DB::table('empleados')->insert([
+            'nombre' => 'paco3',
+            'apellido' => 'paquito3',
+            'email'  =>  'paco@gmail.com',
+            'telefono'    =>  '12345378'
+            
+        ]);
+        DB::table('empleados')->insert([
+            'nombre' => 'paco4',
+            'apellido' => 'paquito4',
+            'email'  =>  'paco@gmail.com',
+            'telefono'    =>  '12345378'
+            
+        ]);
+        DB::table('empleados')->insert([
+            'nombre' => 'paco5',
+            'apellido' => 'paquito5',
+            'email'  =>  'paco@gmail.com',
+            'telefono'    =>  '12345378'
+            
+        ]);
+        DB::table('empleados')->insert([
+            'nombre' => 'paco6',
+            'apellido' => 'paquito6',
+            'email'  =>  'paco@gmail.com',
+            'telefono'    =>  '12345378'
+            
+        ]);
+        DB::table('empleados')->insert([
+            'nombre' => 'paco7',
+            'apellido' => 'paquito7',
+            'email'  =>  'paco@gmail.com',
+            'telefono'    =>  '12345378'
+            
+        ]);
+        DB::table('empleados')->insert([
+            'nombre' => 'paco8',
+            'apellido' => 'paquito8',
+            'email'  =>  'paco@gmail.com',
+            'telefono'    =>  '12345378'
+            
+        ]);
+        DB::table('empleados')->insert([
+            'nombre' => 'paco9',
+            'apellido' => 'paquito9',
+            'email'  =>  'paco@gmail.com',
+            'telefono'    =>  '12345378'
+            
+        ]);
     }
 }

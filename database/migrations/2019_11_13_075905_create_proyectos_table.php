@@ -15,12 +15,15 @@ class CreateProyectosTable extends Migration
     {
         Schema::create('proyectos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('empleado_id');
             $table->string('nombre',100);
             $table->string('titulo');
             $table->date('fechainicio');
             $table->date('fechafin');
             $table->integer('horasestimadas');
             $table->timestamps();
+
+            $table->foreign('empleado_id')->references('id')->on('empleados');
         });
     }
 
