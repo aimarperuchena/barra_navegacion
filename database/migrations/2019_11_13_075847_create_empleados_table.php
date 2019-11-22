@@ -15,11 +15,14 @@ class CreateEmpleadosTable extends Migration
     {
         Schema::create('empleados', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('departamento_id');
             $table->string('nombre',100);
             $table->string('apellido');
             $table->string('email',100);
             $table->string('telefono');
             $table->timestamps();
+            $table->foreign('departamento_id')->references('id')->on('departamentos');
+
         });
     }
 

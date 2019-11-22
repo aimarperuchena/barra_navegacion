@@ -3,18 +3,27 @@
 @section('title', 'UD5. ORM')
 
 @section('content')
+
+  <h2>Empleados</h2>
+
     <table>
-    <tr>
-    <th>Id</th>
-    <th>Nombre</th>
-    <th>Apellido</th>
-    <th>Email</th>
-    <th>Telefono</th>
-    </tr>
-       @if(count($empleados)>0)
-       @foreach($empleados as $empleado)
-       <tr>
+      <tr>
+        <th>Id</th>
+        <th>Departamento</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Email</th>
+        <th>Telefono</th>
+        <th>Proyecto</th>
+      </tr>
+
+    
+        
+          <tr>
             <td>{{$empleado->id}}</td>
+            @if(!is_null($empleado->departamento))
+            <td>{{$empleado->departamento->nombre}}</td>
+            @endif
             <td>{{$empleado->nombre}}</td>
             <td>{{$empleado->apellido}}</td>
             <td>{{$empleado->email}}</td>
@@ -22,9 +31,9 @@
             @if(!is_null($empleado->proyecto))
             <td>{{$empleado->proyecto->nombre}}</td>
             @endif
-
           </tr>
-       @endforeach
-       @endif
+    
+ 
     </table>
-    @endsection
+
+@endsection
