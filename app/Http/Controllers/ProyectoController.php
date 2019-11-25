@@ -42,4 +42,26 @@ class ProyectoController extends Controller
         $proyecto->delete();
         return redirect(route('proyectos.index'));
       }
+
+
+      public function create(){
+       
+        $empleados=Empleado::all();
+        return view('proyectos/create')->with('empleados',$empleados);
+      }
+
+      public function store(ProyectoRequest $request){
+        $validated=$request->validated();
+
+        $proyecto=new Proyecto();
+        $proyecto->nombre=$request->nombre;
+        $proyecto->titulo=$request->titulo;
+        $proyecto->fechainicio=$request->fechainicio;
+        $proyecto->fechafin=$request->fechafin;
+        $proyecto->horasestimadas=$request->horasestimadas;
+        $proyecto->empleado_id=$request->empleado;
+        $proyecto->save();
+        return redirect(route('proyectos.index'));
+
+      }
 }

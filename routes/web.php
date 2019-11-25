@@ -29,6 +29,8 @@ Route::get('proyectos/{id}', 'ProyectoController@show')->name('proyectos.show');
 Route::get('proyectos/editar/{id}', 'ProyectoController@editar')->name('proyectos.editar');
 Route::post('proyectos/update', 'ProyectoController@update')->name('proyectos.update');
 Route::get('proyectos/eliminar/{id}', 'ProyectoController@eliminar')->name('proyectos.eliminar');
+Route::get('proyectoscreate','ProyectoController@create')->name('proyectoscreate');
+Route::post('proyectos/store','ProyectoController@store')->name('proyectos.store');
 
 
 

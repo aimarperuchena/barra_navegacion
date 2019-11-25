@@ -5,7 +5,7 @@
 @section('content')
 
   <h2>Proyectos</h2>
-
+<a href="/proyectoscreate">Nuevo</a>
     <table>
       <tr>
         <th>Id</th>
