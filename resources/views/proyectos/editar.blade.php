@@ -5,7 +5,7 @@
 @section('content')
 <form action="{{route('proyectos.update')}}" method="post">
 @csrf
-  <span>Nombre: </span><input type="text" name="nombre" id="" value="{{$proyecto->nombre}}"><br>
+  <span>Nombre: </span><input type="text" name="nombre" id="" value="{{$proyecto->nombre}}" readonly><br>
   <span>Titulo: </span><input type="text" name="titulo" id="" value="{{$proyecto->titulo}}"><br>
   <span>Fecha inicio: </span><input type="date" name="fechainicio" id="" value="{{$proyecto->fechainicio}}"><br>
   <span>Fecha fin: </span><input type="date" name="fechafin" id="" value="{{$proyecto->fechafin}}"><br>

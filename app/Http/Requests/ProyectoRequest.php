@@ -26,8 +26,8 @@ class ProyectoRequest extends FormRequest
         return [
             'nombre'=>'required',
             'titulo'=>'required',
-            'fechainicio'=>'required',
-            'fechafin'=>'required',
+            'fechainicio'=>'required|date|before:fechafin',
+            'fechafin'=>'required|date|after:fechainicio',
             'horasestimadas'=>'required|min:0',
             'empleado'=>'required'
         ];
