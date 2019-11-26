@@ -20,7 +20,7 @@ class Proyecto_table_seeder extends Seeder
       
             DB::table('proyectos')->insert([
                 'nombre' => Str::random(10),
-                'empleado_id'=>('1'),
+                'encargado_id'=>('1'),
                 'titulo' => Str::random(20),
                 'fechainicio' => $fechainicio,
                 'fechafin'  => $fechafin,
@@ -36,7 +36,7 @@ class Proyecto_table_seeder extends Seeder
       
             DB::table('proyectos')->insert([
                 'nombre' => Str::random(10),
-                'empleado_id'=>('2'),
+                'encargado_id'=>('2'),
                 'titulo' => Str::random(20),
                 'fechainicio' => $fechainicio,
                 'fechafin'  => $fechafin,
@@ -51,7 +51,7 @@ class Proyecto_table_seeder extends Seeder
       
             DB::table('proyectos')->insert([
                 'nombre' => Str::random(10),
-                'empleado_id'=>('3'),
+                'encargado_id'=>('3'),
                 'titulo' => Str::random(20),
                 'fechainicio' => $fechainicio,
                 'fechafin'  => $fechafin,
@@ -66,7 +66,7 @@ class Proyecto_table_seeder extends Seeder
       
             DB::table('proyectos')->insert([
                 'nombre' => Str::random(10),
-                'empleado_id'=>('4'),
+                'encargado_id'=>('4'),
                 'titulo' => Str::random(20),
                 'fechainicio' => $fechainicio,
                 'fechafin'  => $fechafin,
@@ -81,7 +81,7 @@ class Proyecto_table_seeder extends Seeder
       
             DB::table('proyectos')->insert([
                 'nombre' => Str::random(10),
-                'empleado_id'=>('5'),
+                'encargado_id'=>('5'),
                 'titulo' => Str::random(20),
                 'fechainicio' => $fechainicio,
                 'fechafin'  => $fechafin,
