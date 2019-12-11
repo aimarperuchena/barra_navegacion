@@ -6,18 +6,20 @@ use Illuminate\Database\Eloquent\Model;
 
 class Empleado extends Model
 {
-    protected $table='empleados';
-    protected $fillable=['id','nombre','apellido','email','telefono','proyecto', 'departamento_id'];
+    protected $table = 'empleados';
+    protected $fillable = ['id', 'nombre', 'apellido', 'email', 'telefono', 'proyecto', 'departamento_id'];
 
     public function proyecto()
     {
-    return $this->hasOne('App\Proyecto');
+        return $this->hasOne('App\Proyecto');
     }
     public function departamento()
     {
-    return $this->belongsTo('App\Departamento');
+        return $this->belongsTo('App\Departamento');
     }
 
-    
-    
+    public function proyectos()
+    {
+        return $this->belongsToMany(Proyecto::class);
+    }
 }
