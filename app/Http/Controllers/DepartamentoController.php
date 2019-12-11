@@ -14,7 +14,7 @@ class DepartamentoController extends Controller
   }
 
   public function show($id){
-    $empleados=Empleado::where('departamento_id',$id)->get();
-  return view('departamentos/show')->with('empleados',$empleados);
+    $departamentos = Departamento::where('id', '=', $id)->get();
+    return view('departamentos/show')->with(['departamentos' => $departamentos]);
   }
 }

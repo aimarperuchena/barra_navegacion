@@ -12,23 +12,29 @@ class Departamento_table_seeder extends Seeder
     public function run()
     {
         DB::table('departamentos')->insert([
-            'nombre' => ('departamento1')
+            'nombre' => 'departamento1'
+        
         ]);
 
         DB::table('departamentos')->insert([
             'nombre' => 'departamento2'
+        
         ]);
         DB::table('departamentos')->insert([
-            'nombre' => 'departamento3'
+            'nombre' => 'departamento3',
+         
         ]);
         DB::table('departamentos')->insert([
             'nombre' => 'departamento4'
+
         ]);
         DB::table('departamentos')->insert([
             'nombre' => 'departamento5'
+      
         ]);
         DB::table('departamentos')->insert([
             'nombre' => 'departamento6'
+          
         ]);
     }
 }
