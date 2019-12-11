@@ -18,7 +18,7 @@
         <th>Colabora</th>
       </tr>
 
-      
+      <merge></merge>
           <tr>
             <td>{{$proyecto->id}}</td>
             <td>{{$proyecto->nombre}}</td>
